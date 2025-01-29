@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ocr-api:
+    build:
+      context: ..
+      dockerfile: infrastructure/Dockerfile
+    container_name: ocr-api
+    ports:
+      - '8500:8500'
+    restart: always
+    volumes:
+      - ../app:/app
